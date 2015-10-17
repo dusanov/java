@@ -2,7 +2,7 @@ package me.dusanov.mvnapptest;
 
 /**
  * Hello world!
- *
+ * helloo ssh commit
  */
 public class App 
 {

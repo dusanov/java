@@ -1,3 +1,13 @@
+# java bins
+*.class
+BIN/
+bin/
+.metadata/
+RemoteSystemsTempFiles/
+.classpath
+.project
+
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

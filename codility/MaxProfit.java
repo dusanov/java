@@ -1,8 +1,16 @@
 import java.util.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 class MaxProfit{
 
     public static void main(String ... args){
-        
+
         //int[] arr = {-1,2,-2,1,4,-1,2,2};
         int[] arr = {23171,21011,21123,21366,21013,21367};
         MaxProfit g = new  MaxProfit();

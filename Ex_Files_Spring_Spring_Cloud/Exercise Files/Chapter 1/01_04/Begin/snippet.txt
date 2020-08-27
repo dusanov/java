@@ -1,0 +1,8 @@
+@Bean
+    public Docket api(){
+        return new Docket(DocumentationType.SWAGGER_2).groupName("Room").select()
+                .apis(RequestHandlerSelectors.basePackage("com.frankmoley.services.room"))
+                .paths(any()).build().apiInfo(new ApiInfo("Room Services",
+                        "A set of services to provide data access to rooms", "1.0.0", null,
+                        new Contact("Frank Moley", "https://twitter.com/fpmoles", null),null, null));
+    }

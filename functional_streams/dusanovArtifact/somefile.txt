@@ -1,0 +1,69 @@
+Program started with initial: M
+monads section:
+Hello monads
+================
+====Section 5: transforming & rearanging=====
+Pera
+Louise
+Mike
+================
+===== Reduce & collect ======
+ Mike Louise Djura Sirotica Pera
+long version: MikeLouiseDjuraSiroticaPera
+medium version: MikeLouiseDjuraSiroticaPera
+short version: Mike, Louise, Djura, Sirotica, Pera
+ tree of employees: [Employee(name=Sirotica, salary=300), Employee(name=Djura, salary=1300), Employee(name=Mike, salary=2000), Employee(name=Louise, salary=2500), Employee(name=Pera, salary=3700)]
+ == Salary map: {Pera=3700, Mike=2000, Louise=2500, Sirotica=300, Djura=1300}
+ == Salary grouping by: {0=[Employee(name=Sirotica, salary=300)], 1=[Employee(name=Djura, salary=1300)], 2=[Employee(name=Mike, salary=2000), Employee(name=Louise, salary=2500)], 3=[Employee(name=Pera, salary=3700)]}
+ == Salary > 2300 partition by: {false=[Employee(name=Mike, salary=2000), Employee(name=Djura, salary=1300), Employee(name=Sirotica, salary=300)], true=[Employee(name=Louise, salary=2500), Employee(name=Pera, salary=3700)]}
+================
+===== primitive streams: ======
+-=- avg salary: OptionalDouble[1960.0]
+================
+====== Parallel ======
+ == sequential sum of salaries: 9800
+ == parallel sum of salaries: 9800
+================
+==== Using Parallel Streams: ========
+================
+Louise
+Pera
+spit out random ints greater than 0: 
+ generated: -1203498845
+ generated: 848134424
+848134424
+ generated: 1934670183
+1934670183
+ generated: -1169172571
+ generated: -1345925253
+ generated: 376519633
+376519633
+ generated: 1496789734
+1496789734
+ generated: -1473573366
+ generated: 1621424980
+1621424980
+ generated: 971919768
+971919768
+ generated: -842398392
+ generated: 1122885759
+1122885759
+ generated: 1490340789
+1490340789
+ generated: -1077903851
+ generated: 910340780
+910340780
+ generated: -396340267
+ generated: -416326657
+ generated: 310469431
+310469431
+A
+AA
+AAA
+AAAA
+AAAAA
+AAAAAA
+AAAAAAA
+AAAAAAAA
+AAAAAAAAA
+AAAAAAAAAA

@@ -1,0 +1,52 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE'
+        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:latest.release'
+        classpath 'com.netflix.nebula:nebula-release-plugin:3.0.0'
+        classpath 'com.netflix.nebula:gradle-netflixoss-project-plugin:3.1.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'nebula.nebula-release'
+apply plugin: 'nebula.netflixoss'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'nebula.optional-base'
+
+group = 'com.netflix.spring'
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+repositories {
+    jcenter()
+    maven { url 'http://repo.spring.io/snapshot' }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.1.0.BUILD-SNAPSHOT'
+    }
+}
+
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-web'
+  compile 'org.springframework.boot:spring-boot-starter-actuator'
+	compile 'org.springframework.boot:spring-boot-starter-aop'
+
+  compile 'org.springframework.cloud:spring-cloud-starter-eureka', optional
+  compile 'org.springframework.boot:spring-boot-starter-integration', optional
+  compile 'org.springframework.integration:spring-integration-java-dsl', optional
+
+  compile 'com.netflix.spectator:spectator-api:0.30.0', optional
+  compile 'com.netflix.spectator:spectator-reg-servo:0.30.0', optional
+  compile 'com.netflix.spectator:spectator-ext-sandbox:0.30.0', optional
+  compile 'com.netflix.servo:servo-atlas:0.11.2', optional
+
+  compile 'com.netflix.frigga:frigga:0.13'
+
+  testCompile 'junit:junit:latest.release'
+  testCompile 'org.mockito:mockito-core'
+  testCompile 'org.springframework:spring-test'
+}

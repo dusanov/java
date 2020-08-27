@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "00f704ef-d339-4dc8-b552-c77cb87d196d",
+		"name": "reactive-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roomNumber\" : 123,\n\t\"checkIn\" : \"2019-05-03\",\n\t\"checkOut\" : \"2019-05-09\",\n\t\"price\" : 150\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/v1/reservation/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"v1",
+						"reservation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Reservation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roomNumber\" : 123,\n\t\"checkIn\" : \"2019-05-03\",\n\t\"checkOut\" : \"2019-05-09\",\n\t\"price\" : 150\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/v1/reservation/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"v1",
+						"reservation",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/v1/reservation/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"v1",
+						"reservation",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reservation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"roomNumber\" : 123,\n\t\"checkIn\" : \"2019-05-03\",\n\t\"checkOut\" : \"2019-05-09\",\n\t\"price\" : 150\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/room/v1/reservation/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room",
+						"v1",
+						"reservation",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
